@@ -15,15 +15,63 @@
 		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<dom4j.version>1.6.1</dom4j.version>
+		<com.sun.msv.datatype.xsd.version>20060615</com.sun.msv.datatype.xsd.version>
+		<junit.version>4.12</junit.version>
+		<net.sf.jtidy.version>r938</net.sf.jtidy.version>
+		<pull-parser.version>2.1.10</pull-parser.version>
+		<jaxen.version>1.1.1</jaxen.version>
 	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>harry</groupId>
+				<artifactId>xml-dom</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
 			<dependency>
 				<groupId>dom4j</groupId>
 				<artifactId>dom4j</artifactId>
 				<version>${dom4j.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.sun.msv.datatype.xsd/xsdlib -->
+			<dependency>
+				<groupId>com.sun.msv.datatype.xsd</groupId>
+				<artifactId>xsdlib</artifactId>
+				<version>${com.sun.msv.datatype.xsd.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/net.sf.jtidy/jtidy -->
+			<dependency>
+				<groupId>net.sf.jtidy</groupId>
+				<artifactId>jtidy</artifactId>
+				<version>${net.sf.jtidy.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/pull-parser/pull-parser -->
+			<dependency>
+				<groupId>pull-parser</groupId>
+				<artifactId>pull-parser</artifactId>
+				<version>${pull-parser.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/jaxen/jaxen -->
+			<dependency>
+				<groupId>jaxen</groupId>
+				<artifactId>jaxen</artifactId>
+				<version>${jaxen.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
